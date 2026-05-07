@@ -69,7 +69,7 @@ export default function AboutPage() {
 
       <section className="bg-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
             What our credentials mean
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -79,7 +79,7 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {certs.map(({ icon: Icon, title, body }) => (
               <div key={title} className="rounded-xl bg-white p-6 shadow-sm">
-                <Icon className="h-8 w-8 text-amber-600" />
+                <Icon className="h-8 w-8 text-sky-600" />
                 <h3 className="mt-4 text-lg font-bold text-slate-900">{title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{body}</p>
               </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
       <section className="bg-white">
         <div className="mx-auto grid max-w-5xl gap-10 px-4 py-16 md:grid-cols-2">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
               Where we work
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <ul className="mt-5 grid grid-cols-2 gap-2 text-sm text-slate-700">
               {brand.serviceAreas.map((area) => (
                 <li key={area} className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-amber-600" />
+                  <MapPin className="h-4 w-4 text-sky-600" />
                   {area}
                 </li>
               ))}
@@ -109,7 +109,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
               Why customers choose us
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
@@ -117,28 +117,28 @@ export default function AboutPage() {
             </h2>
             <ul className="mt-5 space-y-3 text-slate-700">
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
                 <span>
                   <strong className="text-slate-900">NRCIA roof inspector</strong> — credentials
                   realtors and insurance carriers respect.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
                 <span>
                   <strong className="text-slate-900">Insurance specialists</strong> — we meet your
                   adjuster and document the damage.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
                 <span>
                   <strong className="text-slate-900">Owner on every job</strong> — no salespeople,
                   no subbed-out chaos.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
                 <span>
                   <strong className="text-slate-900">Local since {brand.founded}</strong> — Castle
                   Rock-based, accountable, here tomorrow.
@@ -151,7 +151,7 @@ export default function AboutPage() {
 
       <section className="bg-slate-100">
         <div className="mx-auto max-w-3xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
             FAQ
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -172,7 +172,7 @@ export default function AboutPage() {
                   <span className="text-base font-bold text-slate-900 md:text-lg">{q}</span>
                   <span
                     aria-hidden="true"
-                    className="mt-1 flex-none text-amber-600 transition group-open:rotate-45"
+                    className="mt-1 flex-none text-sky-600 transition group-open:rotate-45"
                   >
                     +
                   </span>

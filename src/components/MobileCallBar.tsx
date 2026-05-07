@@ -14,7 +14,7 @@ export function MobileCallBar() {
       </a>
       <Link
         href="/contact"
-        className="flex flex-1 items-center justify-center gap-2 bg-amber-500 px-4 py-4 text-sm font-semibold text-slate-900"
+        className="flex flex-1 items-center justify-center gap-2 bg-sky-500 px-4 py-4 text-sm font-semibold text-slate-900"
       >
         <ClipboardList className="h-4 w-4" />
         Get Estimate

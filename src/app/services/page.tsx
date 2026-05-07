@@ -70,7 +70,7 @@ export default function ServicesPage() {
                     <ul className="mt-5 grid gap-2 sm:grid-cols-2">
                       {s.details.map((d) => (
                         <li key={d} className="flex items-start gap-2 text-sm text-slate-700">
-                          <Check className="mt-0.5 h-4 w-4 flex-none text-amber-600" />
+                          <Check className="mt-0.5 h-4 w-4 flex-none text-sky-600" />
                           <span>{d}</span>
                         </li>
                       ))}
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                       {s.key === "nrcia" && (
                         <Link
                           href="/nrcia-roof-inspection"
-                          className="inline-flex items-center justify-center rounded-md border border-amber-500 px-4 py-2 text-sm font-semibold text-amber-700 hover:bg-amber-50"
+                          className="inline-flex items-center justify-center rounded-md border border-sky-500 px-4 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-50"
                         >
                           Learn about NRCIA
                         </Link>

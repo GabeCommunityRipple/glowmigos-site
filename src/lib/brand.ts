@@ -48,6 +48,8 @@ export const brand = {
   social: {
     nextdoor: "Nextdoor Neighborhood Favorite",
   },
+  googleReviewsUrl:
+    "https://www.google.com/search?q=Glowmigos+Roofing+%26+Home+Services+Reviews",
 } as const;
 
 export type ServiceKey =

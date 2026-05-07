@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { brand } from "@/lib/brand";
 
@@ -6,7 +7,18 @@ export function Footer() {
     <footer className="mt-16 border-t border-slate-800 bg-slate-900 text-slate-300">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="text-lg font-extrabold text-white">{brand.name}</p>
+          <div className="flex items-center gap-3">
+            <Image
+              src={brand.logo}
+              alt={`${brand.name} logo`}
+              width={1101}
+              height={640}
+              className="h-12 w-auto"
+            />
+            <p className="font-display text-lg font-extrabold text-white">
+              {brand.name}
+            </p>
+          </div>
           <p className="mt-3 max-w-md text-sm text-slate-400">{brand.tagline}</p>
           <p className="mt-4 text-sm text-slate-400">
             {brand.address.serviceAreaLabel}

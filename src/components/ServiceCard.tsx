@@ -18,17 +18,17 @@ export function ServiceCard({ title, description, href, icon: Icon, image, featu
       href={href}
       className={`group relative flex flex-col overflow-hidden rounded-xl border transition ${
         featured
-          ? "border-amber-500 bg-amber-50 hover:border-amber-600 hover:shadow-md"
+          ? "border-sky-500 bg-sky-50 hover:border-sky-600 hover:shadow-md"
           : "border-slate-200 bg-white hover:border-slate-300 hover:shadow-md"
       }`}
     >
       {featured && (
-        <span className="absolute right-4 top-3 z-10 rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-900">
+        <span className="absolute right-4 top-3 z-10 rounded-full bg-sky-500 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-900">
           Featured
         </span>
       )}
 
-      {image && (
+      {image ? (
         <div className="relative aspect-[16/10] w-full bg-slate-100">
           <Image
             src={image}
@@ -38,13 +38,24 @@ export function ServiceCard({ title, description, href, icon: Icon, image, featu
             className="object-cover transition group-hover:scale-[1.02]"
           />
         </div>
+      ) : (
+        <div className="flex aspect-[16/10] w-full items-center justify-center bg-slate-900">
+          <Icon
+            className="h-24 w-24 text-sky-500 transition group-hover:scale-105"
+            strokeWidth={1.5}
+          />
+        </div>
       )}
 
       <div className="flex flex-1 flex-col p-6">
-        <Icon className={`h-7 w-7 ${featured ? "text-amber-600" : "text-slate-700"}`} />
-        <h3 className="mt-4 text-lg font-bold text-slate-900">{title}</h3>
+        {image && (
+          <Icon className={`h-7 w-7 ${featured ? "text-sky-600" : "text-slate-700"}`} />
+        )}
+        <h3 className={`text-lg font-bold text-slate-900 ${image ? "mt-4" : ""}`}>
+          {title}
+        </h3>
         <p className="mt-2 flex-1 text-sm text-slate-600">{description}</p>
-        <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-slate-900 group-hover:text-amber-700">
+        <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-slate-900 group-hover:text-sky-700">
           Learn more <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
         </span>
       </div>

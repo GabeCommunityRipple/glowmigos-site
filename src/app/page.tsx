@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import {
   Home as HomeIcon,
@@ -19,6 +18,7 @@ import {
 import { Hero } from "@/components/Hero";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { LeadForm } from "@/components/LeadForm";
 import { CTASection } from "@/components/CTASection";
 import { brand, promotions, whyChooseUs, workPhotos } from "@/lib/brand";
@@ -70,7 +70,7 @@ export default function HomePage() {
       <TrustStrip />
 
       {/* Promotions */}
-      <section className="bg-amber-500">
+      <section className="bg-sky-500">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 py-6 md:grid-cols-2">
           {promotions.map((p) => (
             <div key={p.title} className="flex items-start gap-3 text-slate-900">
@@ -88,7 +88,7 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-10 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
               What we do
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -111,7 +111,7 @@ export default function HomePage() {
       <section className="bg-slate-100">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-8 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
               Recent work
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -141,11 +141,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ReviewsSection />
+
       {/* Why us */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-10 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
               Why Glowmigos
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -156,7 +158,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2">
             {reasons.map(({ icon: Icon, title, body }) => (
               <div key={title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                <Icon className="h-8 w-8 text-amber-600" />
+                <Icon className="h-8 w-8 text-sky-600" />
                 <h3 className="mt-4 text-xl font-bold text-slate-900">{title}</h3>
                 <p className="mt-2 text-slate-600">{body}</p>
               </div>
@@ -171,7 +173,7 @@ export default function HomePage() {
             <ul className="mt-4 grid gap-3 md:grid-cols-2">
               {whyChooseUs.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-slate-700">
-                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-amber-500" />
+                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-sky-500" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -184,7 +186,7 @@ export default function HomePage() {
       <section className="bg-slate-100">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
               Get a free estimate
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -210,29 +212,6 @@ export default function HomePage() {
             heading="Free Estimate"
             subheading="We'll get back to you fast — usually same day."
           />
-        </div>
-      </section>
-
-      {/* Reviews placeholder */}
-      <section className="border-y border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-            What neighbors say
-          </p>
-          <p className="mt-3 text-lg text-slate-700">
-            <strong className="text-slate-900">Nextdoor Neighborhood Favorite</strong> in
-            The Village at Castle Pines and Ryder Cup at Plum Creek.
-          </p>
-          <p className="mt-2 text-sm text-slate-500">
-            {/* TODO: integrate Google Reviews via API or manual curation */}
-            Google reviews coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="mt-5 inline-block rounded-md bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
-          >
-            Get Your Free Estimate
-          </Link>
         </div>
       </section>
 

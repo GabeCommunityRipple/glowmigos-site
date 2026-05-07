@@ -64,7 +64,7 @@ export function LeadForm({
     return (
       <div className={wrapperCls}>
         <div className="flex flex-col items-center gap-3 py-8 text-center">
-          <CheckCircle2 className="h-12 w-12 text-amber-500" />
+          <CheckCircle2 className="h-12 w-12 text-sky-500" />
           <h3 className="text-2xl font-bold text-slate-900">Thanks — we got it.</h3>
           <p className="max-w-md text-slate-600">
             Ronny will get back to you shortly. For urgent issues, call{" "}
@@ -106,7 +106,7 @@ export function LeadForm({
             name="service"
             defaultValue={defaultService}
             required
-            className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-slate-900 focus:ring-2 focus:ring-amber-500/30"
+            className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-slate-900 focus:ring-2 focus:ring-sky-500/30"
           >
             {serviceFormOptions.map((opt) => (
               <option key={opt} value={opt}>
@@ -124,7 +124,7 @@ export function LeadForm({
             name="message"
             rows={4}
             placeholder="Anything we should know? Hail damage, timing, what you're trying to accomplish..."
-            className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-slate-900 focus:ring-2 focus:ring-amber-500/30"
+            className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-slate-900 focus:ring-2 focus:ring-sky-500/30"
           />
         </div>
 
@@ -188,7 +188,7 @@ function Field({
     <div>
       <label htmlFor={name} className="block text-sm font-semibold text-slate-800">
         {label}
-        {required && <span className="text-amber-600"> *</span>}
+        {required && <span className="text-sky-600"> *</span>}
       </label>
       <input
         id={name}
@@ -196,7 +196,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-slate-900 focus:ring-2 focus:ring-amber-500/30"
+        className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-slate-900 focus:ring-2 focus:ring-sky-500/30"
       />
     </div>
   );
