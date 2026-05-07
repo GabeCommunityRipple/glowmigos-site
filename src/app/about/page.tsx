@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
 import { Award, ShieldCheck, Hammer, MapPin, Sparkles } from "lucide-react";
-import { brand } from "@/lib/brand";
+import { brand, faqs } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "About Glowmigos — Castle Rock Owner-Operated Contractor",
@@ -148,6 +148,58 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="bg-slate-100">
+        <div className="mx-auto max-w-3xl px-4 py-16">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            FAQ
+          </p>
+          <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
+            Common questions.
+          </h2>
+          <p className="mt-3 text-slate-600">
+            Don&apos;t see your question? Call{" "}
+            <a className="font-semibold text-slate-900 underline" href={brand.phoneHref}>
+              {brand.phone}
+            </a>
+            .
+          </p>
+
+          <div className="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+            {faqs.map(({ q, a }) => (
+              <details key={q} className="group p-5 md:p-6">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                  <span className="text-base font-bold text-slate-900 md:text-lg">{q}</span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 flex-none text-amber-600 transition group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-slate-700">{a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Structured data for FAQ — helps with rich results in search. */}
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(({ q, a }) => ({
+              "@type": "Question",
+              name: q,
+              acceptedAnswer: { "@type": "Answer", text: a },
+            })),
+          }),
+        }}
+      />
 
       <CTASection />
     </>

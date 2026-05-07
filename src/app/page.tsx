@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Home as HomeIcon,
   Hammer,
@@ -8,27 +9,30 @@ import {
   Sparkles,
   ClipboardCheck,
   CloudLightning,
+  Building2,
   Award,
   ShieldCheck,
   Users,
   MapPin,
+  Tag,
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ServiceCard } from "@/components/ServiceCard";
 import { LeadForm } from "@/components/LeadForm";
 import { CTASection } from "@/components/CTASection";
-import { brand } from "@/lib/brand";
+import { brand, promotions, whyChooseUs, workPhotos } from "@/lib/brand";
 
 const cards = [
-  { title: "Roofing", description: "Replacement, repair, hail claims. Class 4 upgrades.", href: "/services#roofing", icon: HomeIcon },
+  { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon },
   { title: "Decks", description: "New construction, composite, wood, screened porches.", href: "/services#decks", icon: Hammer },
-  { title: "Gutters", description: "Install, repair, cleaning, leaf guards.", href: "/services#gutters", icon: Droplets },
+  { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets },
   { title: "Siding", description: "Full siding installs and storm-damage repairs.", href: "/services#siding", icon: Square },
   { title: "Painting", description: "Interior and exterior painting done right.", href: "/services#painting", icon: PaintRoller },
-  { title: "Christmas & Permanent Lighting", description: "Holiday installs and year-round permanent lights.", href: "/services#lighting", icon: Sparkles },
+  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. Never hang lights again.", href: "/services#lighting", icon: Sparkles },
+  { title: "Commercial Flat Roofing", description: "EPDM, TPO, and Silicone coatings.", href: "/services#commercial", icon: Building2 },
   { title: "NRCIA Roof Inspections", description: "1 of only 2 NRCIA-certified inspectors in CO.", href: "/nrcia-roof-inspection", icon: ClipboardCheck, featured: true },
-  { title: "Storm Damage / Insurance", description: "Full advocacy through your insurance claim.", href: "/services#storm", icon: CloudLightning },
+  { title: "Storm Damage / 24/7 Emergency", description: "Ice dams, wind, hail, emergency tarping.", href: "/services#storm", icon: CloudLightning },
 ];
 
 const reasons = [
@@ -65,6 +69,21 @@ export default function HomePage() {
 
       <TrustStrip />
 
+      {/* Promotions */}
+      <section className="bg-amber-500">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 py-6 md:grid-cols-2">
+          {promotions.map((p) => (
+            <div key={p.title} className="flex items-start gap-3 text-slate-900">
+              <Tag className="mt-0.5 h-5 w-5 flex-none" />
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-wide">{p.title}</p>
+                <p className="text-sm font-medium">{p.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Services grid */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
@@ -80,7 +99,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((c) => (
               <ServiceCard key={c.title} {...c} />
             ))}
@@ -88,8 +107,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why us */}
+      {/* Recent work gallery */}
       <section className="bg-slate-100">
+        <div className="mx-auto max-w-7xl px-4 py-16">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+              Recent work
+            </p>
+            <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
+              Real jobs. Real photos.
+            </h2>
+            <p className="mt-3 text-slate-600">
+              A few from the field. More coming as we add them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
+            {workPhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative aspect-square overflow-hidden rounded-lg bg-slate-200"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  className="object-cover transition hover:scale-[1.03]"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why us */}
+      <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
@@ -102,18 +155,33 @@ export default function HomePage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {reasons.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="rounded-xl bg-white p-6 shadow-sm">
+              <div key={title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                 <Icon className="h-8 w-8 text-amber-600" />
                 <h3 className="mt-4 text-xl font-bold text-slate-900">{title}</h3>
                 <p className="mt-2 text-slate-600">{body}</p>
               </div>
             ))}
           </div>
+
+          {/* Ronny's own short list */}
+          <div className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+              The short version
+            </p>
+            <ul className="mt-4 grid gap-3 md:grid-cols-2">
+              {whyChooseUs.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-slate-700">
+                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-amber-500" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
       {/* Inline form */}
-      <section className="bg-white">
+      <section className="bg-slate-100">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
@@ -130,7 +198,7 @@ export default function HomePage() {
               .
             </p>
 
-            <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <div className="mt-6 rounded-xl border border-slate-200 bg-white p-5">
               <p className="text-sm font-semibold text-slate-900">Service areas</p>
               <p className="mt-1 text-sm text-slate-600">
                 {brand.serviceAreas.join(" · ")}
@@ -146,7 +214,7 @@ export default function HomePage() {
       </section>
 
       {/* Reviews placeholder */}
-      <section className="border-y border-slate-200 bg-slate-100">
+      <section className="border-y border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-12 text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
             What neighbors say
