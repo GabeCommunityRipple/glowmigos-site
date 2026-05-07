@@ -14,7 +14,7 @@ const nav = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800 bg-slate-900">
+    <header className="sticky top-0 z-40 border-b border-slate-800 bg-black">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:py-4">
         <Link
           href="/"
@@ -36,7 +36,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-300 hover:text-white"
+              className="text-sm font-medium text-white hover:text-amber-400"
             >
               {item.label}
             </Link>
