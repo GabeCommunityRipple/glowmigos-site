@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 const cards = [
-  { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon, image: "/images/services/roofing.webp" },
+  { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon, image: "/images/services/roofing.jpg" },
   { title: "Decks", description: "New construction, composite, wood, screened porches.", href: "/services#decks", icon: Hammer, image: "/images/services/decks.jpg" },
   { title: "Siding", description: "Full siding installs and storm-damage repairs.", href: "/services#siding", icon: Square, image: "/images/services/siding.jpg" },
   { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets, image: "/images/services/gutters.webp" },

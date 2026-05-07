@@ -85,7 +85,7 @@ export const services: {
       "Insurance claim advocacy",
     ],
     formValue: "Roofing",
-    image: "/images/services/roofing.webp",
+    image: "/images/services/roofing.jpg",
   },
   {
     key: "decks",
