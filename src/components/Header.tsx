@@ -5,7 +5,8 @@ import { brand } from "@/lib/brand";
 const nav = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/nrcia-roof-inspection", label: "NRCIA Inspections" },
+  { href: "/inspiration", label: "Inspiration" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

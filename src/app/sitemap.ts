@@ -5,7 +5,15 @@ const SITE_URL =
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const routes = ["", "/services", "/about", "/contact", "/nrcia-roof-inspection"];
+  const routes = [
+    "",
+    "/services",
+    "/inspiration",
+    "/portfolio",
+    "/about",
+    "/contact",
+    "/nrcia-roof-inspection",
+  ];
   return routes.map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
