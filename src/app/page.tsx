@@ -24,13 +24,13 @@ import { CTASection } from "@/components/CTASection";
 import { brand, promotions, whyChooseUs, workPhotos } from "@/lib/brand";
 
 const cards = [
-  { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon },
+  { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon, image: "/images/services/roofing.webp" },
   { title: "Decks", description: "New construction, composite, wood, screened porches.", href: "/services#decks", icon: Hammer },
-  { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets },
+  { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets, image: "/images/services/gutters.webp" },
   { title: "Siding", description: "Full siding installs and storm-damage repairs.", href: "/services#siding", icon: Square },
-  { title: "Painting", description: "Interior and exterior painting done right.", href: "/services#painting", icon: PaintRoller },
-  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. Never hang lights again.", href: "/services#lighting", icon: Sparkles },
-  { title: "Commercial Flat Roofing", description: "EPDM, TPO, and Silicone coatings.", href: "/services#commercial", icon: Building2 },
+  { title: "Painting", description: "Interior and exterior painting done right.", href: "/services#painting", icon: PaintRoller, image: "/images/services/painting.webp" },
+  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. Never hang lights again.", href: "/services#lighting", icon: Sparkles, image: "/images/services/lighting.webp" },
+  { title: "Commercial Flat Roofing", description: "EPDM, TPO, and Silicone coatings.", href: "/services#commercial", icon: Building2, image: "/images/services/commercial.webp" },
   { title: "NRCIA Roof Inspections", description: "1 of only 2 NRCIA-certified inspectors in CO.", href: "/nrcia-roof-inspection", icon: ClipboardCheck, featured: true },
   { title: "Storm Damage / 24/7 Emergency", description: "Ice dams, wind, hail, emergency tarping.", href: "/services#storm", icon: CloudLightning },
 ];

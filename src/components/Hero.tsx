@@ -13,11 +13,9 @@ export function Hero({ eyebrow, headline, sub, showCtas = true }: Props) {
   return (
     <section
       className="relative overflow-hidden bg-slate-900 text-white"
-      // Background: Unsplash placeholder. TODO: replace with Ronny's photos.
-      // Photo by Adam Kring on Unsplash — Front Range / mountain backdrop.
       style={{
         backgroundImage:
-          "linear-gradient(to bottom right, rgba(15,23,42,0.92), rgba(15,23,42,0.75)), url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1920&q=70')",
+          "linear-gradient(to bottom right, rgba(15,23,42,0.85), rgba(15,23,42,0.65)), url('/images/work/lights-metal-roof.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
