@@ -15,7 +15,7 @@ export function Hero({ eyebrow, headline, sub, showCtas = true }: Props) {
       className="relative overflow-hidden bg-slate-900 text-white"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom right, rgba(15,23,42,0.85), rgba(15,23,42,0.65)), url('/images/work/lights-metal-roof.webp')",
+          "linear-gradient(to bottom right, rgba(15,23,42,0.75), rgba(15,23,42,0.55)), url('/images/work/home-at-dusk.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
