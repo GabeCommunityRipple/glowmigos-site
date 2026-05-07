@@ -83,12 +83,6 @@ export default function HomePage() {
         }
       />
 
-      <div className="border-t border-slate-800 bg-slate-900 text-center">
-        <p className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-amber-400">
-          Let it glow.
-        </p>
-      </div>
-
       <TrustStrip />
 
       {/* Promotions */}

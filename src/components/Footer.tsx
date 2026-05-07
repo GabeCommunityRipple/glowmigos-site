@@ -7,24 +7,20 @@ export function Footer() {
     <footer className="mt-16 border-t border-slate-800 bg-slate-900 text-slate-300">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            aria-label="Glowmigos Construction + Lighting"
+            className="inline-block"
+          >
             <Image
               src={brand.logo}
-              alt={`${brand.name} logo`}
-              width={1101}
-              height={640}
-              className="h-12 w-auto"
+              alt="Glowmigos Construction + Lighting"
+              width={1493}
+              height={575}
+              className="h-auto w-72 max-w-full md:w-80"
             />
-            <div>
-              <p className="font-display text-lg font-extrabold text-white">
-                {brand.name}
-              </p>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Let it glow.
-              </p>
-            </div>
-          </div>
-          <p className="mt-3 max-w-md text-sm text-slate-400">{brand.tagline}</p>
+          </Link>
+          <p className="mt-4 max-w-md text-sm text-slate-400">{brand.tagline}</p>
           <p className="mt-4 text-sm text-slate-400">
             {brand.address.serviceAreaLabel}
             <br />

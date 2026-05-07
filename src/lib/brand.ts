@@ -11,7 +11,7 @@ export const brand = {
   phoneHref: "tel:+13032103886",
   email: "glowmigosroofing@gmail.com",
   emailHref: "mailto:glowmigosroofing@gmail.com",
-  logo: "/images/logo.png",
+  logo: "/images/logos/glowmigos-logo.png",
   address: {
     line1: "3028 Trailblazer Way",
     city: "Castle Rock",
