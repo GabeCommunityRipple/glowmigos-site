@@ -64,6 +64,21 @@ export function Footer() {
           <p>{brand.certifications.join(" · ")}</p>
         </div>
       </div>
+
+      <div className="border-t border-slate-800">
+        <p className="mx-auto max-w-7xl px-4 py-4 text-center text-xs text-slate-400">
+          Proudly built by{" "}
+          <a
+            href="https://fulldeckagency.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-slate-300 hover:text-amber-400 hover:underline"
+          >
+            Full Deck Agency
+          </a>
+          . Is your company working with a full deck?
+        </p>
+      </div>
     </footer>
   );
 }
