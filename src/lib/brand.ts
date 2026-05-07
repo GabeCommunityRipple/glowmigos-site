@@ -76,7 +76,7 @@ export const services: {
     title: "Residential Roofing",
     short: "Asphalt shingle, concrete tile, and metal — built for Colorado.",
     description:
-      "Expert installation of Asphalt Shingle, Concrete Tile, and Metal roofing systems. We build roofs that survive Colorado winters. Permanent LED lighting can be installed in the same trip — never hang Christmas lights again.",
+      "Asphalt shingle, concrete tile, metal — built for Colorado winters. Permanent LED lighting can be installed in the same trip — never hang Christmas lights again.",
     details: [
       "Roof replacement & tear-offs",
       "Repairs & leak diagnosis",
@@ -92,7 +92,7 @@ export const services: {
     title: "Decks",
     short: "New construction, composite, wood, screened porches.",
     description:
-      "New construction in composite (Trex), wood, or screened porches — built to handle Colorado weather. Optional under-rail and step lighting turns evenings outside into something special.",
+      "New construction in composite, wood, or screened porches. Optional under-rail and step lighting turns evenings outside into something you actually use.",
     details: [
       "New deck construction",
       "Composite (Trex) and wood",
@@ -103,11 +103,25 @@ export const services: {
     image: "/images/services/decks.jpg",
   },
   {
+    key: "siding",
+    title: "Siding",
+    short: "Installation and repair.",
+    description:
+      "Full siding installs and storm-damage repairs. Pair with exterior accent lighting and your home becomes the one neighbors point to at night.",
+    details: [
+      "Full siding replacement",
+      "Storm damage repair",
+      "Trim and fascia",
+    ],
+    formValue: "Siding",
+    image: "/images/services/siding.jpg",
+  },
+  {
     key: "gutters",
     title: "Gutter Guards & Snow Guards",
     short: "Complete water management — Gutter Rx™ and Rocky Mountain Snow Guards.",
     description:
-      "Complete water management systems. Authorized installers of Gutter Rx™ filtration and Rocky Mountain Snow Guards to prevent slides and damage.",
+      "Authorized installers of Gutter Rx™ filtration and Rocky Mountain Snow Guards.",
     details: [
       "Seamless gutter installation",
       "Gutter Rx™ filtration systems",
@@ -119,40 +133,11 @@ export const services: {
     image: "/images/services/gutters.webp",
   },
   {
-    key: "siding",
-    title: "Siding",
-    short: "Installation and repair.",
-    description:
-      "Full siding installs and storm-damage repairs that stand up to Colorado wind, hail, and snow. Pair with exterior accent lighting that makes your home glow at dusk.",
-    details: [
-      "Full siding replacement",
-      "Storm damage repair",
-      "Trim and fascia",
-    ],
-    formValue: "Siding",
-    image: "/images/services/siding.jpg",
-  },
-  {
-    key: "painting",
-    title: "Painting",
-    short: "Exterior curb appeal, interior refresh.",
-    description:
-      "Our painting crew provides exterior house painting in Castle Rock to boost curb appeal and interior painting services to refresh and modernize living spaces.",
-    details: [
-      "Exterior painting",
-      "Interior painting",
-      "Deck staining & sealing",
-      "Trim and accent work",
-    ],
-    formValue: "Painting",
-    image: "/images/services/painting.webp",
-  },
-  {
     key: "lighting",
     title: "Permanent & Holiday Lighting",
     short: "Never hang lights again — Minleon™ permanent LED systems.",
     description:
-      "Minleon™ permanent LED systems for year-round holidays, security, and architectural beauty. The glow that gives Glowmigos its name — and ties every project we do together.",
+      "The finish that gives Glowmigos its name. Minleon™ permanent LED systems for year-round holidays, security, and the architectural glow that ties every project we do together.",
     details: [
       "Minleon™ permanent LED systems",
       "Holiday Christmas lights",
@@ -161,6 +146,20 @@ export const services: {
     ],
     formValue: "Lighting",
     image: "/images/services/lighting.webp",
+  },
+  {
+    key: "painting",
+    title: "Painting",
+    short: "Exterior curb appeal, interior refresh.",
+    description: "Interior and exterior painting done right.",
+    details: [
+      "Exterior painting",
+      "Interior painting",
+      "Deck staining & sealing",
+      "Trim and accent work",
+    ],
+    formValue: "Painting",
+    image: "/images/services/painting.webp",
   },
   {
     key: "commercial",
@@ -178,6 +177,21 @@ export const services: {
     image: "/images/services/commercial.webp",
   },
   {
+    key: "storm",
+    title: "Storm Damage & Emergency Repair",
+    short: "24/7 rapid response — ice dams, wind, hail, emergency tarping.",
+    description:
+      "24/7 Rapid Response. We specialize in Ice Dam Removal (Steam), Wind Damage, Hail Restoration, and Emergency Tarping. When nature strikes, we secure your home fast.",
+    details: [
+      "24/7 emergency response",
+      "Ice dam removal (steam)",
+      "Wind and hail restoration",
+      "Emergency tarping",
+      "Full insurance claim documentation",
+    ],
+    formValue: "Storm Damage",
+  },
+  {
     key: "nrcia",
     title: "NRCIA Roof Inspections",
     short:
@@ -192,21 +206,6 @@ export const services: {
     ],
     formValue: "NRCIA Inspection",
     image: "/images/services/nrcia.jpg",
-  },
-  {
-    key: "storm",
-    title: "Storm Damage & Emergency Repair",
-    short: "24/7 rapid response — ice dams, wind, hail, emergency tarping.",
-    description:
-      "24/7 Rapid Response. We specialize in Ice Dam Removal (Steam), Wind Damage, Hail Restoration, and Emergency Tarping. When nature strikes, we secure your home fast.",
-    details: [
-      "24/7 emergency response",
-      "Ice dam removal (steam)",
-      "Wind and hail restoration",
-      "Emergency tarping",
-      "Full insurance claim documentation",
-    ],
-    formValue: "Storm Damage",
   },
 ];
 

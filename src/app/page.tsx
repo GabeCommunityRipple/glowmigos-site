@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Home as HomeIcon,
@@ -23,16 +24,23 @@ import { LeadForm } from "@/components/LeadForm";
 import { CTASection } from "@/components/CTASection";
 import { brand, promotions, whyChooseUs, workPhotos } from "@/lib/brand";
 
+export const metadata: Metadata = {
+  title:
+    "Glowmigos — Castle Rock's Home Contractor | Roofing, Decks, Siding & Lighting",
+  description:
+    "Castle Rock home contractor since 2022. Roofing, decks, siding, and permanent lighting — built well, finished with light. NRCIA-certified, ICC-certified, locally owned.",
+};
+
 const cards = [
   { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon, image: "/images/services/roofing.webp" },
   { title: "Decks", description: "New construction, composite, wood, screened porches.", href: "/services#decks", icon: Hammer, image: "/images/services/decks.jpg" },
-  { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets, image: "/images/services/gutters.webp" },
   { title: "Siding", description: "Full siding installs and storm-damage repairs.", href: "/services#siding", icon: Square, image: "/images/services/siding.jpg" },
+  { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets, image: "/images/services/gutters.webp" },
+  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. The finish that ties every project together.", href: "/services#lighting", icon: Sparkles, image: "/images/services/lighting.webp" },
   { title: "Painting", description: "Interior and exterior painting done right.", href: "/services#painting", icon: PaintRoller, image: "/images/services/painting.webp" },
-  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. Never hang lights again.", href: "/services#lighting", icon: Sparkles, image: "/images/services/lighting.webp" },
   { title: "Commercial Flat Roofing", description: "EPDM, TPO, and Silicone coatings.", href: "/services#commercial", icon: Building2, image: "/images/services/commercial.webp" },
-  { title: "NRCIA Roof Inspections", description: "1 of only 2 NRCIA-certified inspectors in CO.", href: "/nrcia-roof-inspection", icon: ClipboardCheck, image: "/images/services/nrcia.jpg", featured: true },
   { title: "Storm Damage / 24/7 Emergency", description: "Ice dams, wind, hail, emergency tarping.", href: "/services#storm", icon: CloudLightning },
+  { title: "NRCIA Roof Inspections", description: "1 of only 2 NRCIA-certified inspectors in CO.", href: "/nrcia-roof-inspection", icon: ClipboardCheck, image: "/images/services/nrcia.jpg", featured: true },
 ];
 
 const reasons = [
@@ -64,8 +72,22 @@ export default function HomePage() {
       <Hero
         eyebrow={brand.address.serviceAreaLabel}
         headline={brand.heroHeadline}
-        sub="Roofing, decks, siding, and permanent lighting — the structural work and the finishing touches that make a house feel like home. One trusted Colorado contractor for all of it."
+        sub={
+          <>
+            Castle Rock home contractor since {brand.founded}.{" "}
+            <span className="font-semibold text-amber-400">
+              Roofing. Decks. Siding. Gutters. Permanent lighting.
+            </span>{" "}
+            Built well, finished with light, done by one trusted Colorado team.
+          </>
+        }
       />
+
+      <div className="border-t border-slate-800 bg-slate-900 text-center">
+        <p className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-amber-400">
+          Let it glow.
+        </p>
+      </div>
 
       <TrustStrip />
 

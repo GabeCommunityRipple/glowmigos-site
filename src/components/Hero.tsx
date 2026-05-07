@@ -5,7 +5,7 @@ import { brand } from "@/lib/brand";
 type Props = {
   eyebrow?: string;
   headline: string;
-  sub?: string;
+  sub?: React.ReactNode;
   showCtas?: boolean;
 };
 

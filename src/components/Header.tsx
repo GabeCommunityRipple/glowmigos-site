@@ -19,7 +19,7 @@ export function Header() {
             Glowmigos
           </span>
           <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 md:text-xs">
-            Let it glow.
+            Roofing &amp; Home Services
           </span>
         </Link>
 

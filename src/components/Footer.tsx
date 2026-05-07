@@ -19,7 +19,7 @@ export function Footer() {
               <p className="font-display text-lg font-extrabold text-white">
                 {brand.name}
               </p>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-400">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
                 Let it glow.
               </p>
             </div>

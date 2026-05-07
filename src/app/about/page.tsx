@@ -5,8 +5,8 @@ import { Award, ShieldCheck, Hammer, MapPin, Sparkles } from "lucide-react";
 import { brand, faqs } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "About Glowmigos — Castle Rock Owner-Operated Contractor",
-  description: `Founded in ${brand.founded} by ${brand.owner}. NRCIA, ICC, and G14 licensed. Serving Castle Rock and the Front Range.`,
+  title: "About — Castle Rock Home Contractor Since 2022",
+  description: `Glowmigos is ${brand.owner}'s Castle Rock home contractor — roofing, decks, siding, and the permanent lighting that ties every project together. NRCIA, ICC, and G14 licensed since ${brand.founded}.`,
 };
 
 const certs = [
@@ -44,17 +44,16 @@ export default function AboutPage() {
           </h2>
           <div className="mt-6 space-y-4 text-lg text-slate-700">
             <p>
-              Glowmigos started in {brand.founded} as a Christmas lighting
-              company. As we worked on more homes — installing lights, then
-              helping with the roof above them, then the deck below them — we
-              realized we&apos;d become the contractor homeowners called for
-              everything that made their house feel finished.
+              Glowmigos started in {brand.founded} hanging Christmas lights in
+              Castle Rock. As we worked on more homes, customers kept asking
+              us to fix the roof above the lights, the siding behind them, the
+              deck under them.
             </p>
             <p>
-              Today we&apos;re Castle Rock&apos;s full-service home contractor,
-              with a lighting-forward approach that runs through every project.
-              Roofs that last, decks built right, and the warm glow that makes
-              a house feel like home.
+              Today we&apos;re a full-service home contractor — and we still
+              finish every job by making the house glow. Roofs that last. Decks
+              built right. Siding that protects. And the warm light that turns
+              it all into a home.
             </p>
             <p>
               {brand.owner} earned the NRCIA roof inspector credential — one of
