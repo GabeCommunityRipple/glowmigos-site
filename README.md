@@ -41,6 +41,10 @@ Copy `.env.local.example` to `.env.local`:
 | `RESEND_API_KEY` | Resend API key | Server-only |
 | `NOTIFICATION_EMAIL` | Inbox that receives lead emails | Default: `glowmigosroofing@gmail.com` |
 | `FROM_EMAIL` | Verified Resend sending address | e.g. `leads@mail.glowmigoshomeservices.com` |
+| `TWILIO_ACCOUNT_SID` | Twilio account SID | Server-only. Required for SMS notifications |
+| `TWILIO_AUTH_TOKEN` | Twilio auth token | Server-only |
+| `TWILIO_FROM_NUMBER` | Twilio sending number, E.164 format | e.g. `+13035551234`. Must be a Twilio-owned or verified number |
+| `NOTIFICATION_PHONE` | Mobile that receives lead SMS, E.164 format | e.g. `+13032103886` (Ronny). Optional — if any of the four Twilio vars is missing, SMS is skipped silently |
 | `NEXT_PUBLIC_SITE_URL` | Optional. Used for sitemap and OG URLs | Defaults to `https://glowmigoshomeservices.com` |
 
 ## Supabase setup

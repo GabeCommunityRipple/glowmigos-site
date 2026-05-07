@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { leadSchema } from "@/lib/schemas";
 import { supabaseAdmin } from "@/lib/supabase";
 import { resend } from "@/lib/resend";
+import { twilioClient } from "@/lib/twilio";
 import { brand } from "@/lib/brand";
 
 export const runtime = "nodejs";
@@ -87,6 +88,29 @@ export async function POST(req: Request) {
     });
   } catch (err) {
     console.error("[leads] customer confirmation send failed:", err);
+  }
+
+  // 4. Send SMS notification via Twilio (best-effort — never fails the request)
+  const twilioFrom = process.env.TWILIO_FROM_NUMBER;
+  const twilioTo = process.env.NOTIFICATION_PHONE;
+  if (twilioFrom && twilioTo) {
+    try {
+      const messageLine = lead.message ? `\n${lead.message.slice(0, 80)}` : "";
+      const body =
+        `🚨 NEW LEAD — Glowmigos\n` +
+        `${lead.name} | ${lead.phone}\n` +
+        `${lead.service}\n` +
+        `${lead.address}` +
+        `${messageLine}\n` +
+        `Reply or call to follow up.`;
+      await twilioClient().messages.create({
+        from: twilioFrom,
+        to: twilioTo,
+        body,
+      });
+    } catch (err) {
+      console.error("[leads] twilio sms failed:", err);
+    }
   }
 
   return NextResponse.json({ ok: true }, { status: 200 });
