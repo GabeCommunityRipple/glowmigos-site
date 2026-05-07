@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { brand } from "@/lib/brand";
+import { MobileNav } from "./MobileNav";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -57,6 +58,7 @@ export function Header() {
           >
             Get Estimate
           </Link>
+          <MobileNav items={nav} />
         </div>
       </div>
     </header>
