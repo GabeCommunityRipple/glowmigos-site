@@ -16,7 +16,7 @@ export const reviews: Review[] = [
     date: "9 months ago",
     text: "Great company and great people.",
     source: "google",
-    avatarColor: "bg-sky-500",
+    avatarColor: "bg-amber-400",
   },
   {
     name: "Marci Ford",
@@ -43,6 +43,6 @@ export const reviews: Review[] = [
     date: "9 months ago",
     text: "Completely impressed. Exceeded my expectations! Client interaction mastery! Responsive and efficient!!!",
     source: "google",
-    avatarColor: "bg-sky-600",
+    avatarColor: "bg-amber-500",
   },
 ];

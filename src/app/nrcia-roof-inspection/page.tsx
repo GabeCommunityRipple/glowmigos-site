@@ -106,7 +106,7 @@ export default function NrciaPage() {
 
       <section className="bg-slate-100">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
             Use cases
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -116,7 +116,7 @@ export default function NrciaPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {useCases.map(({ icon: Icon, title, body }) => (
               <div key={title} className="rounded-xl bg-white p-6 shadow-sm">
-                <Icon className="h-7 w-7 text-sky-600" />
+                <Icon className="h-7 w-7 text-amber-500" />
                 <h3 className="mt-4 text-lg font-bold text-slate-900">{title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{body}</p>
               </div>
@@ -127,7 +127,7 @@ export default function NrciaPage() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
             Who this is for
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -148,7 +148,7 @@ export default function NrciaPage() {
 
       <section className="bg-slate-100">
         <div className="mx-auto max-w-3xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
             What&apos;s included
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -158,7 +158,7 @@ export default function NrciaPage() {
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {included.map((item) => (
               <li key={item} className="flex items-start gap-2 rounded-lg bg-white p-4 shadow-sm">
-                <Check className="mt-0.5 h-5 w-5 flex-none text-sky-600" />
+                <Check className="mt-0.5 h-5 w-5 flex-none text-amber-500" />
                 <span className="text-slate-700">{item}</span>
               </li>
             ))}

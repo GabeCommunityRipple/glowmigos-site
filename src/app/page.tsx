@@ -64,13 +64,13 @@ export default function HomePage() {
       <Hero
         eyebrow={brand.address.serviceAreaLabel}
         headline={brand.heroHeadline}
-        sub="Roofing, decks, gutters, siding, paint, and lighting — done right by the guy who actually shows up."
+        sub="Roofing, decks, siding, and permanent lighting — the structural work and the finishing touches that make a house feel like home. One trusted Colorado contractor for all of it."
       />
 
       <TrustStrip />
 
       {/* Promotions */}
-      <section className="bg-sky-500">
+      <section className="bg-amber-400">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 py-6 md:grid-cols-2">
           {promotions.map((p) => (
             <div key={p.title} className="flex items-start gap-3 text-slate-900">
@@ -88,14 +88,14 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-10 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
               What we do
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
-              Full-service exterior contractor
+              Roofing, decks, siding — and the lighting that ties them together.
             </h2>
             <p className="mt-3 text-slate-600">
-              From a single gutter clean to a full re-roof and insurance claim, we handle it.
+              From a single gutter clean to a full re-roof and insurance claim, we handle it. The permanent lighting is what makes the home feel finished.
             </p>
           </div>
 
@@ -111,7 +111,7 @@ export default function HomePage() {
       <section className="bg-slate-100">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-8 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
               Recent work
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -147,7 +147,7 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mb-10 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
               Why Glowmigos
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -158,7 +158,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2">
             {reasons.map(({ icon: Icon, title, body }) => (
               <div key={title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                <Icon className="h-8 w-8 text-sky-600" />
+                <Icon className="h-8 w-8 text-amber-500" />
                 <h3 className="mt-4 text-xl font-bold text-slate-900">{title}</h3>
                 <p className="mt-2 text-slate-600">{body}</p>
               </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
             <ul className="mt-4 grid gap-3 md:grid-cols-2">
               {whyChooseUs.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-slate-700">
-                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-sky-500" />
+                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-amber-400" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -186,7 +186,7 @@ export default function HomePage() {
       <section className="bg-slate-100">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
               Get a free estimate
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">

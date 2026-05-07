@@ -19,7 +19,7 @@ export function Header() {
             Glowmigos
           </span>
           <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 md:text-xs">
-            Roofing &amp; Home Services
+            Let it glow.
           </span>
         </Link>
 
@@ -45,7 +45,7 @@ export function Header() {
           </a>
           <Link
             href="/contact"
-            className="hidden rounded-md bg-sky-500 px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-sky-400 md:inline-block"
+            className="hidden rounded-md bg-amber-400 px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-500 md:inline-block"
           >
             Get Estimate
           </Link>

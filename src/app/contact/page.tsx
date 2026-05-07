@@ -13,7 +13,7 @@ export default function ContactPage() {
     <>
       <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-7xl px-4 py-14 md:py-20">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-400">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-400">
             Contact
           </p>
           <h1 className="mt-2 max-w-3xl text-4xl font-extrabold leading-tight md:text-5xl">
@@ -26,7 +26,7 @@ export default function ContactPage() {
 
           <a
             href={brand.phoneHref}
-            className="mt-6 inline-flex items-center gap-3 rounded-lg bg-sky-500 px-6 py-4 text-2xl font-extrabold text-slate-900 hover:bg-sky-400"
+            className="mt-6 inline-flex items-center gap-3 rounded-lg bg-amber-400 px-6 py-4 text-2xl font-extrabold text-slate-900 hover:bg-amber-500"
           >
             <Phone className="h-7 w-7" />
             {brand.phone}
@@ -88,7 +88,7 @@ function Info({
 }) {
   return (
     <div className="flex gap-4">
-      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-sky-100 text-sky-700">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-amber-100 text-amber-700">
         <Icon className="h-5 w-5" />
       </div>
       <div>

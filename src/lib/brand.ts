@@ -5,9 +5,8 @@ export const brand = {
   name: "Glowmigos Home Services",
   shortName: "Glowmigos",
   tagline:
-    "Castle Rock's trusted home services pro — roofing, decks, gutters, lights, and more.",
-  heroHeadline:
-    "Castle Rock's Trusted Roofing, Decks & Home Services",
+    "Castle Rock's lighting-forward home contractor — roofing, decks, siding, and the warm glow that ties every project together.",
+  heroHeadline: "We make Castle Rock homes glow.",
   phone: "303-210-3886",
   phoneHref: "tel:+13032103886",
   email: "glowmigosroofing@gmail.com",
@@ -77,7 +76,7 @@ export const services: {
     title: "Residential Roofing",
     short: "Asphalt shingle, concrete tile, and metal — built for Colorado.",
     description:
-      "Expert installation of Asphalt Shingle, Concrete Tile, and Metal roofing systems. We build roofs that survive Colorado winters.",
+      "Expert installation of Asphalt Shingle, Concrete Tile, and Metal roofing systems. We build roofs that survive Colorado winters. Permanent LED lighting can be installed in the same trip — never hang Christmas lights again.",
     details: [
       "Roof replacement & tear-offs",
       "Repairs & leak diagnosis",
@@ -93,7 +92,7 @@ export const services: {
     title: "Decks",
     short: "New construction, composite, wood, screened porches.",
     description:
-      "A growing part of our business. We build new decks, screened porches, and rebuild old ones using composite (Trex) or traditional wood — built to handle Colorado weather.",
+      "New construction in composite (Trex), wood, or screened porches — built to handle Colorado weather. Optional under-rail and step lighting turns evenings outside into something special.",
     details: [
       "New deck construction",
       "Composite (Trex) and wood",
@@ -124,7 +123,7 @@ export const services: {
     title: "Siding",
     short: "Installation and repair.",
     description:
-      "Siding installation and repair to protect your home from Colorado wind, hail, and snow. We handle both full replacements and storm-damage repairs.",
+      "Full siding installs and storm-damage repairs that stand up to Colorado wind, hail, and snow. Pair with exterior accent lighting that makes your home glow at dusk.",
     details: [
       "Full siding replacement",
       "Storm damage repair",
@@ -153,7 +152,7 @@ export const services: {
     title: "Permanent & Holiday Lighting",
     short: "Never hang lights again — Minleon™ permanent LED systems.",
     description:
-      "Never hang lights again. We install Minleon™ permanent LED systems for year-round holidays, security, and architectural beauty.",
+      "Minleon™ permanent LED systems for year-round holidays, security, and architectural beauty. The glow that gives Glowmigos its name — and ties every project we do together.",
     details: [
       "Minleon™ permanent LED systems",
       "Holiday Christmas lights",

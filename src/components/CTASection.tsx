@@ -17,7 +17,7 @@ export function CTASection() {
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
             href={brand.phoneHref}
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-sky-500 px-5 py-3 text-base font-semibold text-slate-900 hover:bg-sky-400"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-amber-400 px-5 py-3 text-base font-semibold text-slate-900 hover:bg-amber-500"
           >
             <Phone className="h-5 w-5" />
             {brand.phone}

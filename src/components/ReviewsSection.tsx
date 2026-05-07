@@ -7,7 +7,7 @@ export function ReviewsSection() {
     <section className="bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-10 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-500">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-400">
             Our Reviews
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -73,7 +73,7 @@ function ReviewCard({ review }: { review: Review }) {
             key={i}
             className={`h-4 w-4 ${
               i < review.rating
-                ? "fill-sky-500 text-sky-500"
+                ? "fill-amber-400 text-amber-400"
                 : "fill-slate-200 text-slate-200"
             }`}
           />

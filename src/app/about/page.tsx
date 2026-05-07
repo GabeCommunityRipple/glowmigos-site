@@ -44,24 +44,25 @@ export default function AboutPage() {
           </h2>
           <div className="mt-6 space-y-4 text-lg text-slate-700">
             <p>
-              Glowmigos started in {brand.founded} hanging Christmas lights in Castle
-              Rock. The lights side of the business is still going strong — but
-              neighbors kept asking about the bigger stuff. Their roof. Their
-              deck. Their gutters that hadn&apos;t been touched in a decade.
+              Glowmigos started in {brand.founded} as a Christmas lighting
+              company. As we worked on more homes — installing lights, then
+              helping with the roof above them, then the deck below them — we
+              realized we&apos;d become the contractor homeowners called for
+              everything that made their house feel finished.
             </p>
             <p>
-              So we built it out. {brand.owner} earned the NRCIA roof inspector
-              credential — one of only two in the state — and added ICC
-              certification on top of the G14 general contractor license. Today
-              we&apos;re a full-service exterior contractor handling roofing,
-              decks, gutters, siding, paint, and lights. Same crew. Same owner
-              on every job.
+              Today we&apos;re Castle Rock&apos;s full-service home contractor,
+              with a lighting-forward approach that runs through every project.
+              Roofs that last, decks built right, and the warm glow that makes
+              a house feel like home.
             </p>
             <p>
-              We work with insurance companies all day — adjusters know us, and
-              we know how to document storm damage so it gets paid. We&apos;re a
-              Nextdoor Neighborhood Favorite in The Village at Castle Pines and
-              Ryder Cup at Plum Creek, which we&apos;re pretty proud of.
+              {brand.owner} earned the NRCIA roof inspector credential — one of
+              only two in the state — and added ICC certification on top of the
+              G14 general contractor license. We work insurance claims all day:
+              adjusters know us, and we know how to document storm damage so it
+              gets paid. Nextdoor Neighborhood Favorite in The Village at Castle
+              Pines and Ryder Cup at Plum Creek.
             </p>
           </div>
         </div>
@@ -69,7 +70,7 @@ export default function AboutPage() {
 
       <section className="bg-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
             What our credentials mean
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -79,7 +80,7 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {certs.map(({ icon: Icon, title, body }) => (
               <div key={title} className="rounded-xl bg-white p-6 shadow-sm">
-                <Icon className="h-8 w-8 text-sky-600" />
+                <Icon className="h-8 w-8 text-amber-500" />
                 <h3 className="mt-4 text-lg font-bold text-slate-900">{title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{body}</p>
               </div>
@@ -91,7 +92,7 @@ export default function AboutPage() {
       <section className="bg-white">
         <div className="mx-auto grid max-w-5xl gap-10 px-4 py-16 md:grid-cols-2">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
               Where we work
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
@@ -101,7 +102,7 @@ export default function AboutPage() {
             <ul className="mt-5 grid grid-cols-2 gap-2 text-sm text-slate-700">
               {brand.serviceAreas.map((area) => (
                 <li key={area} className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-sky-600" />
+                  <MapPin className="h-4 w-4 text-amber-500" />
                   {area}
                 </li>
               ))}
@@ -109,7 +110,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
               Why customers choose us
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900">
@@ -117,28 +118,28 @@ export default function AboutPage() {
             </h2>
             <ul className="mt-5 space-y-3 text-slate-700">
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-500" />
                 <span>
                   <strong className="text-slate-900">NRCIA roof inspector</strong> — credentials
                   realtors and insurance carriers respect.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-500" />
                 <span>
                   <strong className="text-slate-900">Insurance specialists</strong> — we meet your
                   adjuster and document the damage.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-500" />
                 <span>
                   <strong className="text-slate-900">Owner on every job</strong> — no salespeople,
                   no subbed-out chaos.
                 </span>
               </li>
               <li className="flex gap-3">
-                <Sparkles className="mt-1 h-5 w-5 flex-none text-sky-600" />
+                <Sparkles className="mt-1 h-5 w-5 flex-none text-amber-500" />
                 <span>
                   <strong className="text-slate-900">Local since {brand.founded}</strong> — Castle
                   Rock-based, accountable, here tomorrow.
@@ -151,7 +152,7 @@ export default function AboutPage() {
 
       <section className="bg-slate-100">
         <div className="mx-auto max-w-3xl px-4 py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-sky-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
             FAQ
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-slate-900 md:text-4xl">
@@ -172,7 +173,7 @@ export default function AboutPage() {
                   <span className="text-base font-bold text-slate-900 md:text-lg">{q}</span>
                   <span
                     aria-hidden="true"
-                    className="mt-1 flex-none text-sky-600 transition group-open:rotate-45"
+                    className="mt-1 flex-none text-amber-500 transition group-open:rotate-45"
                   >
                     +
                   </span>

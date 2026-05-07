@@ -15,9 +15,14 @@ export function Footer() {
               height={640}
               className="h-12 w-auto"
             />
-            <p className="font-display text-lg font-extrabold text-white">
-              {brand.name}
-            </p>
+            <div>
+              <p className="font-display text-lg font-extrabold text-white">
+                {brand.name}
+              </p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-400">
+                Let it glow.
+              </p>
+            </div>
           </div>
           <p className="mt-3 max-w-md text-sm text-slate-400">{brand.tagline}</p>
           <p className="mt-4 text-sm text-slate-400">

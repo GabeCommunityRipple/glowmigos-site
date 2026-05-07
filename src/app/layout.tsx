@@ -25,7 +25,7 @@ const SITE_URL =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${brand.name} — Castle Rock Roofing, Decks, Gutters & More`,
+    default: `${brand.shortName} — Castle Rock's Lighting-Forward Home Contractor`,
     template: `%s | ${brand.name}`,
   },
   description: brand.tagline,
