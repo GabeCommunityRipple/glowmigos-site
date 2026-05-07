@@ -101,6 +101,7 @@ export const services: {
       "Repairs & resurfacing",
     ],
     formValue: "Deck",
+    image: "/images/services/decks.jpg",
   },
   {
     key: "gutters",
@@ -130,6 +131,7 @@ export const services: {
       "Trim and fascia",
     ],
     formValue: "Siding",
+    image: "/images/services/siding.jpg",
   },
   {
     key: "painting",
@@ -190,6 +192,7 @@ export const services: {
       "Post-storm damage assessment",
     ],
     formValue: "NRCIA Inspection",
+    image: "/images/services/nrcia.jpg",
   },
   {
     key: "storm",
