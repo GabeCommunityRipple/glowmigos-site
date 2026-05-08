@@ -49,6 +49,7 @@ export function Footer() {
           <p className="text-sm font-semibold text-white">Site</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li><Link className="hover:text-white" href="/services">Services</Link></li>
+            <li><Link className="hover:text-white" href="/iron-doors">Iron Doors</Link></li>
             <li><Link className="hover:text-white" href="/inspiration">Inspiration</Link></li>
             <li><Link className="hover:text-white" href="/portfolio">Portfolio</Link></li>
             <li><Link className="hover:text-white" href="/nrcia-roof-inspection">NRCIA Inspections</Link></li>

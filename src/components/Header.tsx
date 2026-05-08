@@ -7,6 +7,7 @@ import { MobileNav } from "./MobileNav";
 const nav = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/iron-doors", label: "Iron Doors" },
   { href: "/inspiration", label: "Inspiration" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
