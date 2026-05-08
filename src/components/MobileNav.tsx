@@ -6,7 +6,11 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { brand } from "@/lib/brand";
 
-type NavItem = { href: string; label: string };
+export type NavItem = {
+  label: string;
+  href?: string;
+  children?: { label: string; href: string }[];
+};
 
 export function MobileNav({ items }: { items: NavItem[] }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +30,8 @@ export function MobileNav({ items }: { items: NavItem[] }) {
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [isOpen]);
+
+  const close = () => setIsOpen(false);
 
   return (
     <>
@@ -52,7 +58,7 @@ export function MobileNav({ items }: { items: NavItem[] }) {
             <Link
               href="/"
               aria-label="Glowmigos Construction + Lighting"
-              onClick={() => setIsOpen(false)}
+              onClick={close}
               className="block"
             >
               <Image
@@ -66,7 +72,7 @@ export function MobileNav({ items }: { items: NavItem[] }) {
             <button
               type="button"
               aria-label="Close menu"
-              onClick={() => setIsOpen(false)}
+              onClick={close}
               className="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-amber-400"
             >
               <X className="h-6 w-6" />
@@ -75,24 +81,45 @@ export function MobileNav({ items }: { items: NavItem[] }) {
 
           <nav className="flex-1 overflow-y-auto px-4 py-8">
             <ul className="space-y-1">
-              {items.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block rounded-md px-3 py-3 text-2xl font-semibold text-white transition hover:text-amber-400"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {items.map((item) =>
+                item.children ? (
+                  <li key={item.label} className="pt-4 first:pt-0">
+                    <p className="px-3 pb-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                      {item.label}
+                    </p>
+                    <ul className="space-y-1">
+                      {item.children.map((child) => (
+                        <li key={child.href}>
+                          <Link
+                            href={child.href}
+                            onClick={close}
+                            className="block rounded-md px-3 py-2 text-xl font-semibold text-white transition hover:text-amber-400"
+                          >
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href!}
+                      onClick={close}
+                      className="block rounded-md px-3 py-3 text-2xl font-semibold text-white transition hover:text-amber-400"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </nav>
 
           <div className="border-t border-slate-800 px-4 py-6">
             <a
               href={brand.phoneHref}
-              onClick={() => setIsOpen(false)}
+              onClick={close}
               className="flex items-center justify-center gap-3 rounded-md bg-amber-400 px-5 py-4 text-lg font-bold text-slate-900 hover:bg-amber-500"
             >
               <Phone className="h-5 w-5" />

@@ -2,16 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { brand } from "@/lib/brand";
-import { MobileNav } from "./MobileNav";
+import { MobileNav, type NavItem } from "./MobileNav";
+import { DropdownNavItem } from "./DropdownNavItem";
 
-const nav = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/iron-doors", label: "Iron Doors" },
-  { href: "/inspiration", label: "Inspiration" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+const nav: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Iron Doors", href: "/iron-doors" },
+  {
+    label: "Gallery",
+    children: [
+      { label: "Inspiration", href: "/inspiration" },
+      { label: "Portfolio", href: "/portfolio" },
+    ],
+  },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -34,15 +40,23 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-white hover:text-amber-400"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) =>
+            item.children ? (
+              <DropdownNavItem
+                key={item.label}
+                label={item.label}
+                items={item.children}
+              />
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href!}
+                className="text-sm font-medium text-white hover:text-amber-400"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-2">
