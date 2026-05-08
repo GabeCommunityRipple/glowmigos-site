@@ -3,6 +3,7 @@ import Image from "next/image";
 import {
   Home as HomeIcon,
   Hammer,
+  DoorOpen,
   Droplets,
   Square,
   PaintRoller,
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
 const cards = [
   { title: "Residential Roofing", description: "Asphalt shingle, concrete tile, metal — built for Colorado.", href: "/services#roofing", icon: HomeIcon, image: "/images/services/roofing.jpg" },
   { title: "Decks", description: "New construction, composite, wood, screened porches.", href: "/services#decks", icon: Hammer, image: "/images/services/decks.jpg" },
+  { title: "Custom Iron Doors", description: "Hand-forged iron entry doors with leaded or textured glass.", href: "/iron-doors", icon: DoorOpen, image: "/images/services/iron-doors.jpg" },
   { title: "Siding", description: "Full siding installs and storm-damage repairs.", href: "/services#siding", icon: Square, image: "/images/services/siding.jpg" },
   { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets, image: "/images/services/gutters.webp" },
   { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. The finish that ties every project together.", href: "/services#lighting", icon: Sparkles, image: "/images/services/lighting.webp" },

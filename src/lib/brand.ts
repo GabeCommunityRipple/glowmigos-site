@@ -54,6 +54,7 @@ export const brand = {
 export type ServiceKey =
   | "roofing"
   | "decks"
+  | "iron-doors"
   | "gutters"
   | "siding"
   | "painting"
@@ -101,6 +102,22 @@ export const services: {
     ],
     formValue: "Deck",
     image: "/images/services/decks.jpg",
+  },
+  {
+    key: "iron-doors",
+    title: "Custom Iron Doors",
+    short: "Hand-forged iron entry doors with leaded or textured glass.",
+    description:
+      "Hand-forged iron entry doors with leaded or textured glass. The first thing visitors see — done right. Pair with exterior accent lighting and your front entrance becomes the showpiece of your home.",
+    details: [
+      "Custom design from your drawings or fresh sketches",
+      "Solid steel construction, hand-applied finishes",
+      "Glass: clear, frosted, leaded, or textured",
+      "Custom hardware and finish selection",
+      "Residential shipping nationwide",
+    ],
+    formValue: "Custom Iron Doors",
+    image: "/images/services/iron-doors.jpg",
   },
   {
     key: "siding",
@@ -287,5 +304,13 @@ export const workPhotos = [
   {
     src: "/images/work/lights-metal-roof.webp",
     alt: "Holiday lights along a metal roofline",
+  },
+  {
+    src: "/images/work/iron-door-2.jpg",
+    alt: "Hand-forged iron entry door installed by Glowmigos",
+  },
+  {
+    src: "/images/work/iron-door-3.jpg",
+    alt: "Custom iron door detail and hardware",
   },
 ];
