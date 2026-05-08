@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/services",
     "/iron-doors",
+    "/lighting",
     "/inspiration",
     "/portfolio",
     "/about",

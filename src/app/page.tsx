@@ -38,7 +38,7 @@ const cards = [
   { title: "Custom Iron Doors", description: "Hand-forged iron entry doors with leaded or textured glass.", href: "/iron-doors", icon: DoorOpen, image: "/images/services/iron-doors.jpg" },
   { title: "Siding", description: "Full siding installs and storm-damage repairs.", href: "/services#siding", icon: Square, image: "/images/services/siding.jpg" },
   { title: "Gutters & Snow Guards", description: "Gutter Rx™ filtration and Rocky Mountain Snow Guards.", href: "/services#gutters", icon: Droplets, image: "/images/services/gutters.webp" },
-  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. The finish that ties every project together.", href: "/services#lighting", icon: Sparkles, image: "/images/services/lighting.webp" },
+  { title: "Permanent & Holiday Lighting", description: "Minleon™ permanent LED systems. The finish that ties every project together.", href: "/lighting", icon: Sparkles, image: "/images/services/lighting.webp" },
   { title: "Painting", description: "Interior and exterior painting done right.", href: "/services#painting", icon: PaintRoller, image: "/images/services/painting.webp" },
   { title: "Commercial Flat Roofing", description: "EPDM, TPO, and Silicone coatings.", href: "/services#commercial", icon: Building2, image: "/images/services/commercial.webp" },
   { title: "Storm Damage / 24/7 Emergency", description: "Ice dams, wind, hail, emergency tarping.", href: "/services#storm", icon: CloudLightning },

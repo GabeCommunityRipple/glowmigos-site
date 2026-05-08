@@ -71,6 +71,7 @@ export const services: {
   details: string[];
   formValue: string;
   image?: string;
+  href?: string;
 }[] = [
   {
     key: "roofing",
@@ -163,6 +164,7 @@ export const services: {
     ],
     formValue: "Lighting",
     image: "/images/services/lighting.webp",
+    href: "/lighting",
   },
   {
     key: "painting",
