@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/contact",
     "/nrcia-roof-inspection",
+    "/service-areas",
+    "/castle-rock",
+    "/castle-pines",
+    "/parker",
+    "/highlands-ranch",
+    "/colorado-springs",
   ];
   return routes.map((path) => ({
     url: `${SITE_URL}${path}`,

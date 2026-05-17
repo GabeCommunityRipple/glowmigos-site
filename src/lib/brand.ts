@@ -119,6 +119,7 @@ export const services: {
     ],
     formValue: "Custom Iron Doors",
     image: "/images/services/iron-doors.jpg",
+    href: "/iron-doors",
   },
   {
     key: "siding",
@@ -225,6 +226,7 @@ export const services: {
     ],
     formValue: "NRCIA Inspection",
     image: "/images/services/nrcia.jpg",
+    href: "/nrcia-roof-inspection",
   },
 ];
 

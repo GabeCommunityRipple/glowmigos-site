@@ -53,6 +53,7 @@ export function Footer() {
             <li><Link className="hover:text-white" href="/inspiration">Inspiration</Link></li>
             <li><Link className="hover:text-white" href="/portfolio">Portfolio</Link></li>
             <li><Link className="hover:text-white" href="/nrcia-roof-inspection">NRCIA Inspections</Link></li>
+            <li><Link className="hover:text-white" href="/service-areas">Service Areas</Link></li>
             <li><Link className="hover:text-white" href="/about">About</Link></li>
             <li><Link className="hover:text-white" href="/contact">Contact</Link></li>
           </ul>
