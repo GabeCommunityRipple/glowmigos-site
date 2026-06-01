@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileCallBar } from "@/components/MobileCallBar";
+import { StormBanner } from "@/components/StormBanner";
 import { brand } from "@/lib/brand";
 
 const inter = Inter({
@@ -81,6 +82,7 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <StormBanner />
         <Header />
         <main>{children}</main>
         <Footer />

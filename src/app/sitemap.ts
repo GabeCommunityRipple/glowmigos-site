@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/contact",
     "/nrcia-roof-inspection",
+    "/storm-response",
     "/service-areas",
     "/castle-rock",
     "/castle-pines",

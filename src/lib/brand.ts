@@ -209,7 +209,7 @@ export const services: {
       "Emergency tarping",
       "Full insurance claim documentation",
     ],
-    formValue: "Storm Damage",
+    formValue: "Storm Damage / Insurance Claim",
   },
   {
     key: "nrcia",
@@ -234,6 +234,11 @@ export const serviceFormOptions = [
   ...services.map((s) => s.formValue),
   "Other",
 ];
+
+// Feature flags — flip to false when storm response window ends.
+export const featureFlags = {
+  stormResponseBannerActive: true,
+};
 
 // Promotions surfaced on the home page.
 export const promotions = [
