@@ -39,7 +39,7 @@ Copy `.env.local.example` to `.env.local`:
 | `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL | Public — fine to expose |
 | `SUPABASE_SERVICE_ROLE_KEY` | Service role key | **Server-only.** Never use a `NEXT_PUBLIC_` prefix |
 | `RESEND_API_KEY` | Resend API key | Server-only |
-| `NOTIFICATION_EMAIL` | Inbox that receives lead emails | Default: `glowmigosroofing@gmail.com` |
+| `NOTIFICATION_EMAIL` | Inbox that receives lead emails | Default: `info@glowmigoshomeservices.com` |
 | `FROM_EMAIL` | Verified Resend sending address | e.g. `leads@mail.glowmigoshomeservices.com` |
 | `TWILIO_ACCOUNT_SID` | Twilio account SID | Server-only. Required for SMS notifications |
 | `TWILIO_AUTH_TOKEN` | Twilio auth token | Server-only |
@@ -75,7 +75,7 @@ The lead email sends from `FROM_EMAIL` — that domain has to be verified in Res
 1. In Resend, add `mail.glowmigoshomeservices.com` (or any subdomain you control) as a sending domain.
 2. Add the DKIM/SPF DNS records Resend gives you. Wait for green checkmarks.
 3. Set `FROM_EMAIL=leads@mail.glowmigoshomeservices.com` in your env.
-4. Set `NOTIFICATION_EMAIL=glowmigosroofing@gmail.com` (or wherever Ronny wants notifications to land).
+4. Set `NOTIFICATION_EMAIL=info@glowmigoshomeservices.com` (or wherever Ronny wants notifications to land).
 
 If the from-domain isn't verified, the API route still saves the lead to Supabase; only the email send fails (logged to console).
 

@@ -9,8 +9,8 @@ export const brand = {
   heroHeadline: "We make Castle Rock homes glow.",
   phone: "303-210-3886",
   phoneHref: "tel:+13032103886",
-  email: "glowmigosroofing@gmail.com",
-  emailHref: "mailto:glowmigosroofing@gmail.com",
+  email: "info@glowmigoshomeservices.com",
+  emailHref: "mailto:info@glowmigoshomeservices.com",
   logo: "/images/logos/glowmigos-logo.png",
   address: {
     line1: "3028 Trailblazer Way",
