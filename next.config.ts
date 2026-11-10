@@ -22,6 +22,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Canonical host is non-www: 301 every www request to the apex domain.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.glowmigoshomeservices.com" }],
+        destination: "https://glowmigoshomeservices.com/:path*",
+        statusCode: 301,
+      },
       { source: "/about/", destination: "/about", statusCode: 301 },
       { source: "/services/", destination: "/services", statusCode: 301 },
       ...wordPressRedirects.flatMap(({ from, to }) => [
