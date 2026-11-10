@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     "Glowmigos — Castle Rock's Home Contractor | Roofing, Decks, Siding & Lighting",
   description:
     "Castle Rock home contractor since 2022. Roofing, decks, siding, and permanent lighting — built well, finished with light. NRCIA-certified, ICC-certified, locally owned.",
+  // Explicit canonical so query-string variants (e.g. spam-injected ?foo/bar.html
+  // URLs) consolidate to the clean home page instead of being flagged Soft 404.
+  alternates: {
+    canonical: "https://glowmigoshomeservices.com",
+  },
 };
 
 const cards = [
