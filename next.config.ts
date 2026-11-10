@@ -6,7 +6,6 @@ const wordPressRedirects: { from: string; to: string }[] = [
   { from: "/roof-repair-in-castle-rock-co", to: "/services" },
   { from: "/gutter-services", to: "/services" },
   { from: "/roofing-services", to: "/services" },
-  { from: "/service-areas", to: "/about" },
   { from: "/roof-certification-colorado-mountain-towns", to: "/nrcia-roof-inspection" },
   { from: "/roof-certification-aspen-co", to: "/nrcia-roof-inspection" },
   { from: "/roof-certification-vail-co", to: "/nrcia-roof-inspection" },
