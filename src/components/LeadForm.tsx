@@ -46,6 +46,19 @@ export function LeadForm({
         throw new Error(body?.error ?? "Something went wrong. Please call us instead.");
       }
 
+      if (
+        typeof window !== "undefined" &&
+        window.gtag &&
+        process.env.NEXT_PUBLIC_GOOGLE_ADS_ID &&
+        process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL
+      ) {
+        window.gtag("event", "conversion", {
+          send_to: `${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}/${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL}`,
+          value: 50.0,
+          currency: "USD",
+        });
+      }
+
       setStatus("success");
       form.reset();
     } catch (err) {
