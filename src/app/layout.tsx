@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,17 +7,22 @@ import { MobileCallBar } from "@/components/MobileCallBar";
 import { StormBanner } from "@/components/StormBanner";
 import { brand } from "@/lib/brand";
 
-const inter = Inter({
-  subsets: ["latin"],
+// Fonts are bundled locally (latin subset, variable weight) so builds never
+// depend on reaching Google Fonts. Source files + OFL licenses: ./fonts/
+const inter = localFont({
+  src: "./fonts/Inter-Variable-latin.woff2",
+  weight: "100 900",
+  style: "normal",
   variable: "--font-inter",
   display: "swap",
 });
 
-const manrope = Manrope({
-  subsets: ["latin"],
+const manrope = localFont({
+  src: "./fonts/Manrope-Variable-latin.woff2",
+  weight: "200 800",
+  style: "normal",
   variable: "--font-manrope",
   display: "swap",
-  weight: ["600", "700", "800"],
 });
 
 const SITE_URL =
