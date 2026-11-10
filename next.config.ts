@@ -12,6 +12,9 @@ const wordPressRedirects: { from: string; to: string }[] = [
   { from: "/roof-certification-vail-co", to: "/nrcia-roof-inspection" },
   { from: "/jefferson-county-co-roofing", to: "/services" },
   { from: "/douglas-county-co-roofing", to: "/services" },
+  { from: "/service-areas/minturn-co", to: "/service-areas" },
+  { from: "/roof-certification-colorado", to: "/nrcia-roof-inspection" },
+  { from: "/roof-certification-vail", to: "/nrcia-roof-inspection" },
 ];
 
 const nextConfig: NextConfig = {
