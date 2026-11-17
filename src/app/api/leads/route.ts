@@ -44,6 +44,7 @@ export async function POST(req: Request) {
       message: lead.message ?? null,
       source: "website",
       status: "new",
+      client: "glowmigos-roofing",
     });
     if (error) {
       console.error("[leads] supabase insert failed:", error);
